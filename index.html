@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 10%;
+        }
+        #tengah {
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+        }
+        td {
+            padding: 5px;
+            vertical-align: top;
+        }
+        td label {
+            display: inline-block;
+            width: 150px;
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="url"],
+        textarea,
+        input[type="date"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+    <title>Form</title>
+</head>
+<body>
+    <img src="Polije.png" alt="Polije Logo">
+    <h2 id="tengah">Form Pendaftaran</h2>
+    <p id="tengah">Silakan isi form secara lengkap</p>
+    
+    <fieldset>
+        <legend>Informasi Primer</legend>
+        <form action="data.php" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Nama Lengkap:</label>
+                        <input type="text" id="name" name="name" placeholder="Isikan nama lengkap Anda">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="mis. email@gmail.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Password dengan huruf, angka dan simbol">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="AsalKota">Asal Kota:</label>
+                        <select id="AsalKota" name="AsalKota">
+                            <option value="Sidoarjo">Sidoarjo</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Jember">Jember</option>
+                            <option value="Banyuwangi">Banyuwangi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender:</label>
+                        <input type="radio" id="lk" name="gender" value="Laki-laki">
+                        <label for="lk">Laki-laki</label>
+                        <input type="radio" id="pr" name="gender" value="Perempuan">
+                        <label for="pr">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="alamat">Alamat:</label>
+                        <textarea id="alamat" name="alamat" placeholder="Isikan alamat lengkap Anda"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Kendaraan:</label>
+                        <input type="checkbox" id="mobil" name="kendaraan" value="Mobil">
+                        <label for="mobil">Mobil</label>
+                        <input type="checkbox" id="sepeda_motor" name="kendaraan" value="Sepeda Motor">
+                        <label for="sepeda_motor">Sepeda Motor</label>
+                        <input type="checkbox" id="sepeda" name="kendaraan" value="Sepeda">
+                        <label for="sepeda">Sepeda</label>
+                    </td>
+                </tr>
+            </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Informasi Sekunder</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="website">Alamat Website:</label>
+                        <input type="url" id="website" name="website" placeholder="Isikan alamat website Anda">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tanggal_lahir">Tanggal Lahir:</label>
+                        <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="jumlah_anak">Jumlah Anak:</label>
+                        <input type="number" id="jumlah_anak" name="jumlah_anak">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nilai">Nilai:</label>
+                        <input type="number" id="nilai" name="nilai" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="myFile">Upload Foto Anda:</label>
+                        <input type="file" id="myFile" name="filename">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+            <button class="button">KIRIM</button><br>
+      <input type="checkbox" id="subscribe-email">
+        <label for="subscribe-email">Subscribe notifikasi ke email Anda (jika tidak, silakan kosongi)</label>
+        <input type="checkbox" id="subscribe-post">
+        <label for="subscribe-post">Subscribe postingan dari website</label><br>
+    <div class="footer">
+        <p>&copy; AdityaFajarMaulana - 2024</p>
+    </div>
+</body>
+</html>
